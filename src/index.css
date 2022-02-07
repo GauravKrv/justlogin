@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.logdiv {
+  background: url(./images/login.svg);
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homediv {
+  padding-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: contain;
+  background: url(./images/welcome.svg);
+}
+.iplog {
+  border-radius: 5px;
+  width: 20%;
+
+  padding: 2%;
+  margin: 2%;
+}
+.bulogin {
+  padding: 2%;
+  width: auto;
+  background-color: rgba(70, 96, 245, 0.596);
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  text-align: center;
+  font-size: 14px;
+  width: 25%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bulogin span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bulogin span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.bulogin:hover span {
+  padding-right: 25px;
+}
+
+.bulogin:hover span:after {
+  opacity: 1;
+  right: 0;
 }
